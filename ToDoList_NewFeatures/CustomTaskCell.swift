@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class CustomTaskCell: UITableViewCell {
-    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var dueDateLabel: UILabel!

@@ -10,18 +10,36 @@ import UIKit
 
 class AddTaskViewController: UIViewController {
     
+    var delegate: AddTaskViewDelegate?
+    
+    var taskName: String?
     @IBOutlet weak var taskTitleTextField: UITextField!
+    
+    var taskDesc: String?
     @IBOutlet weak var taskDescriptionTextField: UITextField!
+    
+    var dueDate: Date?
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    @IBAction func dateSelected(_ sender: UIDatePicker) {
+        self.view.endEditing(true)
+        dueDate = sender.date
+    }
+    
     @IBAction func doneButtonPressed(_ sender: UIButton) {
+        taskName = taskTitleTextField.text
+        taskDesc = taskDescriptionTextField.text
+        delegate?.sendDataToMainView(taskName!, taskDesc!, dueDate!)
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        taskTitleTextField.placeholder = "Task Name"
+        taskDescriptionTextField.placeholder = "Task Description"
     }
 
     override func didReceiveMemoryWarning() {

@@ -86,6 +86,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableView" destination="LaJ-1u-tdJ" id="Ro5-Nz-N6y"/>
                         <segue destination="D1g-ra-Uua" kind="presentation" identifier="AddTaskSegue" id="Jkg-K3-e3F"/>
                     </connections>
                 </viewController>
@@ -141,6 +142,9 @@
                                         <date key="date" timeIntervalSinceReferenceDate="559079407.11178803">
                                             <!--2018-09-19 19:50:07 +0000-->
                                         </date>
+                                        <connections>
+                                            <action selector="dateSelected:" destination="D1g-ra-Uua" eventType="valueChanged" id="MPa-fh-Ri4"/>
+                                        </connections>
                                     </datePicker>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONP-PJ-6MC">
                                         <rect key="frame" x="0.0" y="495" width="343" height="20"/>
