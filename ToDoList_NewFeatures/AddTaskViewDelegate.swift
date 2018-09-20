@@ -1,14 +1,14 @@
+////
+////  AddTaskViewDelegate.swift
+////  ToDoList_NewFeatures
+////
+////  Created by Amanda Demetrio on 9/19/18.
+////  Copyright © 2018 Amanda Demetrio. All rights reserved.
+////
 //
-//  AddTaskViewDelegate.swift
-//  ToDoList_NewFeatures
+//import Foundation
+//import UIKit
 //
-//  Created by Amanda Demetrio on 9/19/18.
-//  Copyright © 2018 Amanda Demetrio. All rights reserved.
-//
-
-import Foundation
-import UIKit
-
-protocol AddTaskViewDelegate {
-    func sendDataToMainView(_ taskName: String, _ taskDesc: String, _ dueDate: Date)
-}
+//protocol AddTaskViewDelegate {
+//    func sendDataToMainView(_ taskName: String, _ taskDesc: String, _ dueDate: Date)
+//}
